@@ -1,0 +1,2296 @@
+/*
+   Theme Name: Neos
+   Author: EwanThemes
+   Author URI: https://themeforest.net/user/ewanthemes
+   Description: Portfolio & CV HTML Template
+   Version: 1.0.0
+*/
+
+/*
+1. "Google Fonts" Connection
+2. Reset Default Styles
+3. General Style Settings
+4. Container & section (padding and margin, section title and subtitle style)
+5. Hero section styles
+6. Portfolio section styles
+6.1 Modal box styles
+7. Pricing section styles
+8. Interests section styles
+9. Education section styles
+10. Awards section styles
+11. Reviews section styles
+12. Slider styles
+13. Quotes section styles
+14. Clients section styles
+15. Contacts section styles
+16. Footer section styles
+17. emailsent.html styles
+18. Preloader
+19. Responsive settings
+19.1 Medium devices. Desktops (≥995px)
+19.2 Extra small devices. Phones (<750px)
+*/
+
+
+/* === 1. "Google Fonts" Connection === */
+ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic');
+
+
+/* === 2. Reset Default Styles === */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+*:before, *:after{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+
+/* === 3. General Style Settings === */
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	color: #333;
+	margin: 0;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 28px;
+	margin-bottom: 15px;
+}
+
+p:last-child {
+	margin-bottom: 0px;
+}
+
+h1 {
+	font-size: 23px;
+	font-weight: 100;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 17px;
+	margin-bottom: 10px;
+	color: #000;
+}
+
+h1 span {
+	display: inline-block;
+	margin-left: 5px;
+	margin-top: -3px;
+	vertical-align: top;
+	font-weight: 300;
+	border: 1px solid rgba(0,0,0,.4);
+	padding: 0px 8px;
+	font-size: 13px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: rgba(0,0,0,.7);
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	border-bottom-color: rgba(48,57,72,0.2);
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+a:hover,
+a:active {
+	border-bottom-color: rgba(48,57,72,0.5);
+}
+
+hr {
+	border: 0;
+	margin: 25px 0;
+	height: 1px;
+	background: rgb(243, 243, 243);
+}
+
+a.icon {
+	text-decoration: none;
+	border-bottom-color: rgba(0,0,0,0);
+	margin-right: 5px;
+	color: #a0a0a0;
+}
+
+.img-responsive {
+	height: auto;
+	display: block;
+	width: 100%;
+}
+
+.m-b-0 {
+	margin-bottom: 0px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-b-20 {
+	margin-bottom: 20px;
+}
+
+.m-b-30 {
+	margin-bottom: 30px;
+}
+
+.m-b-40 {
+	margin-bottom: 40px;
+}
+
+.m-b-50 {
+	margin-bottom: 50px;
+}
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-t-30 {
+	margin-top: 30px;
+}
+
+.m-t-40 {
+	margin-top: 40px;
+}
+
+.m-t-50 {
+	margin-top: 50px;
+}
+
+.m-r-10 {
+	margin-right: 10px;
+}
+
+.m-r-20 {
+	margin-right: 20px;
+}
+
+.m-r-30 {
+	margin-right: 30px;
+}
+
+.m-r-40 {
+	margin-right: 40px;
+}
+
+.m-r-50 {
+	margin-right: 50px;
+}
+
+.m-l-10 {
+	margin-left: 10px;
+}
+
+.m-l-20 {
+	margin-left: 20px;
+}
+
+.m-l-30 {
+	margin-left: 30px;
+}
+
+.m-l-40 {
+	margin-left: 40px;
+}
+
+.m-l-50 {
+	margin-left: 50px;
+}
+
+.p-r-10 {
+	padding-right: 10px;
+}
+
+.p-r-20 {
+	padding-right: 20px;
+}
+
+.p-r-30 {
+	padding-right: 20px;
+}
+
+.p-r-40 {
+	padding-right: 40px;
+}
+
+.p-r-50 {
+	padding-right: 50px;
+}
+
+.p-l-10 {
+	padding-left: 10px;
+}
+
+.p-l-20 {
+	padding-left: 20px;
+}
+
+.p-l-30 {
+	padding-left: 20px;
+}
+
+.p-l-40 {
+	padding-left: 40px;
+}
+
+.p-l-50 {
+	padding-left: 50px;
+}
+
+.p-b-10 {
+	padding-bottom: 10px;
+}
+
+.p-b-20 {
+	padding-bottom: 20px;
+}
+
+.p-b-30 {
+	padding-bottom: 20px;
+}
+
+.p-b-40 {
+	padding-bottom: 40px;
+}
+
+.p-b-50 {
+	padding-bottom: 50px;
+}
+
+.p-t-10 {
+	padding-top: 10px;
+}
+
+.p-t-20 {
+	padding-top: 20px;
+}
+
+.p-t-30 {
+	padding-top: 20px;
+}
+
+.p-t-40 {
+	padding-top: 40px;
+}
+
+.bold {
+	font-weight: 400;
+}
+
+.hint-text {
+	color: rgba(0,0,0,.7);
+}
+
+.all-caps {
+	text-transform: uppercase;
+}
+
+.no-margin {
+	margin: 0px!important;
+}
+
+.clearfix:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+
+/* === 4. Container & section (padding, margin settings) === */
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    background-color: #fff;
+	overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+	color: #a9a9a9;
+    text-align: center;
+    padding: 14px 16px;
+	text-decoration: none;
+	border: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+	color: #feb080;
+	text-decoration: none;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+	color: ebony;
+	font-size: 20px;
+}
+
+.container {
+	border: 1px solid rgb(239, 239, 239);
+	background: #fff;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.section {
+	padding: 0 100px 100px 100px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	border-bottom: 1px solid rgb(247, 247, 247);
+}
+
+.label {
+	text-align: right;
+}
+
+.label .num:before {
+	content: '';
+	width: 45px;
+	height: 2px;
+	top: 13px;
+	left: -62px;
+	display: block;
+	position: absolute;
+}
+
+.label .num {
+	position: relative;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.label .name {
+	color: rgba(0,0,0,.4);
+	display: block;
+	font-size: 17px;
+	font-weight: 300;
+}
+
+
+/* === 5. Hero section styles === */
+
+.logo {
+	position: relative;
+	text-align: right;
+}
+
+.logo:after {
+	content: "";
+	width: 119px;
+	height: 119px;
+	bottom: 0px;
+	right: -5px;
+	position: absolute;
+	display: inline-block;
+	z-index: 5;
+}
+
+.logo img{
+	height: 119px;
+	width: 119px;
+	z-index: 10;
+	position: relative;
+}
+
+.signature {
+	margin: 20px 0;
+	text-align: right;
+}
+
+.signature img {
+	width: 119px;
+	opacity: 0.5;
+}
+
+.hero {
+	padding: 100px;
+	margin-top: 0;
+}
+
+h1.name-title {
+	margin-bottom: 1px;
+}
+
+h2.profession-subtitle {
+	margin-bottom: 15px;
+	color: rgba(0,0,0,.7);
+}
+
+.contact-list-title {
+	color: #000;
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0px;
+}
+
+.contact-list-title i {
+	color: #737373;
+	margin-right: 5px;
+}
+
+.contact-list-text {
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0px;
+	color: rgba(0,0,0,.7);
+}
+
+.contact-list-text a {
+	color: rgba(0,0,0,.7);
+	border: none;
+	text-decoration: none;
+}
+
+.contact-list-text a:hover {
+	color: #feb080;
+}
+
+.hero .fa {
+	color: #828282;
+	margin-right: 5px;
+}
+
+.hero hr {
+	margin: 20px 0;
+}
+
+.contact-list p.fs-14, .contact-list p.fs-12 {
+	line-height: 24px;
+}
+
+.contact-list p.fs-12 {
+	color: #000;
+}
+
+.email {
+	margin-right: auto;
+}
+
+.iconList {
+	display: flex;
+	flex-direction: row;
+}
+
+#git {
+	padding-left: 3em;
+}
+
+#linkedin {
+	padding-left: 1em;
+}
+
+#resume {
+	padding-left: 1em;
+}
+
+div.bio {	
+	text-indent: 50px;	
+}
+
+#intro {
+	margin-top: -25px;
+}
+
+.about-me {
+	margin-right: 40px;
+}
+/* === 6. Portfolio section styles === */
+
+#portfolio {
+	margin-top: -20px;
+	margin-right: 10px;
+}
+
+.portfolio-item {
+	margin-bottom: 20px;
+}
+
+.portfolio-image  {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-item .portfolio-image  img {
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.portfolio-item:hover  .portfolio-image img {
+	-moz-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
+
+.portfolio-description {
+	padding: 25px;
+	background: #fefefe;
+	border: 1px solid rgb(243, 243, 243);
+	border-top: 0;
+	height:200px;
+}
+
+.portfolio-description p {
+	color: rgba(0, 0, 0, .7);
+	margin-left: 18px;
+}
+
+.portfolio-description a:hover {
+	color: rgba(0, 0, 0, .7);
+	text-decoration: none;
+	color: #feb080;
+}
+
+.portfolio-category-tag {
+	background: #f5f5f5;
+	opacity: 0.0;
+	color: #363636;
+	display: inline-block;
+	margin: 0 0 10px;
+    padding: 2px 6px;
+    vertical-align: top;
+	font-size: 13px;
+	text-align: center;
+    border-radius: 2px;
+    -khtml-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-transition: all .2s ease 0s;
+	-webkit-transition: all .2s ease 0s;
+	-o-transition: all .2s ease 0s;
+}
+
+.portfolio-description-title {
+	display: block;
+	color: #000;
+	font-size: 17px;
+	font-weight: 600;
+	
+}
+
+a.portfolio-description-title {	
+	text-decoration: none;
+	border: 0;
+	display: block;
+	margin-left: 18px;
+}
+
+#containernew {
+	display: table;
+	margin:auto;
+	border-spacing: 30px;
+}
+
+#updatenew {
+    display: table-cell;
+    vertical-align: middle;
+	text-align: center;
+	padding:4px;
+}
+
+.updatenewLast {
+	display: table-cell;
+    vertical-align: middle;
+	text-align: center;
+	padding:4px;
+}
+
+.firstrow {
+	border-right: 10px solid transparent;
+}
+
+
+
+/* === 6.1 Modal box styles === */
+
+.modal-box {
+	max-width: 620px;
+	background: #fff;
+	position: relative!important;
+	margin: 0 auto;
+	left: 0!important;
+}
+
+.modal-box img {
+	width: 100%;
+	height: 100%;
+}
+
+.modal-box h1 {
+	margin-bottom: 15px;
+}
+
+.modal-box-content {
+	padding: 5px;
+}
+
+.modal-box-content a:hover {
+	text-decoration: none;
+	color: #feb080;
+}
+
+.modal-row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+	flex: 50%;
+  }
+
+  .mode-row {
+	display: flex;
+  }
+  
+  .mode-column {
+	flex: 50.00%;
+	padding: 5px;
+  }
+  
+.modal-head{
+	text-align: center;
+	list-style: none;
+	font-size: 22px;
+	padding-bottom: 40px;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.modal-item{
+	text-align: center;
+	list-style: none;
+	font-size: 18px;
+	font-family: 'EB Garamond', serif;
+}
+
+.modal-link{
+	padding-bottom: 18px;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	margin:auto;
+	font-size: 16px;
+	font-family: 'Old Standard TT', serif;
+}
+
+/* 7. Pricing section styles */
+
+.pricing {
+	text-align: center;
+	border: 1px solid rgb(243, 243, 243);
+	color: rgba(0,0,0,.7);
+	background: #fefefe;
+	font-size: 16px;
+	padding-left: 0;
+}
+
+.pricing i {
+	display: block;
+	margin: auto;
+	font-size: 23px;
+}
+
+.pricing li:first-child,
+.pricing li:last-child {
+	padding: 20px 25px;
+}
+
+.pricing li {
+	list-style: none;
+	padding: 12px 25px;
+}
+
+.pricing li + li {
+	border-top: 1px solid rgb(243, 243, 243);
+}
+
+.pricing span.pricing-title {
+	font-size: 20px;
+}
+
+.pricing h3 {
+	margin-bottom: 0;
+	font-size: 20px;
+}
+
+.pricing span {
+	font-size: 14px;
+	color: rgba(0,0,0,.7);
+	font-weight: 300;
+}
+
+.pricing li:nth-last-child(2) {
+	padding: 20px 25px;
+}
+
+.pricing a.btn {
+	width: auto;
+	margin: auto;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 300;
+	border-radius: 50px;
+	color: rgba(0,0,0,.6);
+	padding: 9px 24px;
+	border: 1px solid rgba(0,0,0,.2);
+	outline: none;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
+
+.pricing a.btn:hover {
+	color: rgba(0,0,0,.7);
+	border: 1px solid rgba(0,0,0,.3);
+}
+
+.pricing span.pricing-title,
+.pricing h3 {
+	color: #333333;
+}
+
+.pricing button {
+	background: #fefefe;
+}
+
+
+/* 8. Interests section styles */
+
+.interests {
+	margin-top: -55px; 
+}
+
+.tech {
+	margin-right: 35px;
+}
+
+.interest-block {
+	text-align: center;
+}
+
+.interest-block i {
+	font-size: 35px;
+	line-height: 0;
+	color: #a9a9a9;
+	display: block;
+	margin-bottom: 2px;
+}
+
+.interest-block h2 {
+	font-size: 18px;
+	margin-top: 2em;
+}
+
+.interest-block p {
+	color: rgba(0,0,0,.6);
+	font-size: 14px;
+	line-height: 23px;
+}
+
+.interest-blocks {
+	text-align: center;
+	padding-left: 7em;
+}
+
+.interest-blocks i {
+	font-size: 35px;
+	line-height: 0;
+	color: #a9a9a9;
+	display: block;
+	margin-bottom: 2px;
+}
+
+.interest-blocks h2 {
+	font-size: 18px;
+	margin-top: 2em;
+}
+
+.interest-blocks svg {
+	width: 65px;
+	height: 100px;
+	color: #a9a9a9;
+	fill: #a9a9a9;
+	vertical-align: top;
+}
+
+.interests-block {
+	margin-left: 20px;
+}
+
+
+/* === 9. Education section styles === */
+
+.timeline-table {
+	margin: 0;
+	position: relative;
+	list-style: none;
+	border: 1px solid rgb(243, 243, 243);
+}
+.timeline-table  > li:nth-child(2n+1) {
+	background: #fbfbfb;
+}
+
+.timeline-table  > li {
+	position: relative;
+	padding: 25px;
+}
+
+.timeline-table  > li:last-of-type {
+	margin-bottom: 0;
+}
+
+.timeline-table  > li:before,
+.timeline-table  > li:after {
+	content: ' ';
+	display: table;
+}
+
+.timeline-table  > li:after {
+	clear: both;
+}
+
+.timeline-table  .timeline-table-date {
+	float: right;
+	color: rgba(0,0,0,.7);
+	font-weight: 300;
+	font-size: 15px;
+	margin-top: 12px;
+	padding-left: 25px;
+	position: relative;
+}
+
+.timeline-table  .timeline-table-content {
+	position: relative;
+	float: left;
+}
+
+.timeline-table  .timeline-table-content > h4 {
+	margin: 0;
+	font-size: 17px;
+	color: #000;
+	font-weight: 300;
+}
+
+.timeline-table  .timeline-table-content > em {
+	font-size: 14px;
+	color: rgba(0,0,0,.6);
+}
+
+.educ-desc {
+	display: none;
+}
+
+.firstrow {
+	padding-left: 20px;
+}
+
+.React {
+	padding-right: 30px;
+}
+
+
+/* === 10. Awards section styles === */
+
+.content-box-wrapper {
+	background: #fefefe;
+	border: 1px solid rgb(243, 243, 243);
+	padding: 25px;
+}
+
+.content-box-wrapper hr {
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+.content-box h3 {
+	margin-bottom: 1px;
+}
+
+.content-box span{
+	font-size: 14px;
+    color: rgba(0, 0, 0, .6);
+	display: block;
+    margin-bottom: 10px;
+}
+
+.content-box p {
+	line-height: 28px;
+	font-size: 16px;
+}
+
+
+/* === 11. Reviews section styles === */
+
+.review-box {
+	border: 1px solid rgb(243, 243, 243);
+}
+
+.review-text {
+	display: block;
+	padding: 25px;
+	background: #fbfbfb;
+}
+
+.review-text p {
+	font-size: 16px;
+	line-height: 28px;
+	color: rgba(0,0,0,.7);
+}
+
+.review-description {
+	border-bottom: 1px solid rgb(243, 243, 243);
+	padding: 25px;
+}
+
+.review-description-image {
+	border-radius: 100%;
+	border: 1px solid rgb(245, 245, 245);
+	width: 43px;
+	height: 43px;
+	overflow: hidden;
+	float: left;
+    margin: 0 15px 0 0;
+}
+
+.review-description-image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-khtml-border-radius: 100%;
+	border: 1px solid rgb(245, 245, 245);
+}
+
+.review-description h2 {
+	color: #000;
+	font-size: 17px;
+}
+
+.review-description p {
+	font-size: 15px;
+	line-height: 23px;
+}
+
+
+/* === 12. Slider styles === */
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+	-webkit-tap-highlight-color:transparent;
+}
+
+.owl-theme .owl-controls .owl-nav [class*=owl-]{
+	color: #fff;
+	font-size: 14px;
+	margin: 5px;
+	padding: 4px 7px;
+	background: #d6d6d6;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px
+}
+
+.owl-theme .owl-controls .owl-nav [class*=owl-]:hover{
+	background: #869791;
+	color: #fff;
+	text-decoration: none
+}
+
+.owl-theme .owl-controls .owl-nav .disabled{
+	opacity: .5;
+	cursor: default
+}
+
+.owl-theme .owl-dots .owl-dot{
+	display: inline-block;
+	zoom: 1;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	margin: 5px 7px;
+	background: #ececec;
+	display: block;
+	-webkit-backface-visibility: visible;
+	-webkit-transition: opacity 200ms ease;
+	-moz-transition: opacity 200ms ease;
+	-ms-transition: opacity 200ms ease;
+	-o-transition: opacity 200ms ease;
+	transition: opacity 200ms ease;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span{
+	background: #383838;
+}
+
+.owl-item {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+
+/* === 13. Quotes section styles === */
+
+blockquote {
+	font-size: 16px;
+	padding: 42px 35px 35px 66px;
+	line-height: 28px;
+	position: relative;
+	color: #383838;
+	background: #fefefe;
+	border: 1px solid rgb(243, 243, 243);
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 60px;
+	position: absolute;
+	left: 27px;
+	top: 47px;
+	color: #7a7a7a;
+}
+
+blockquote cite {
+	color: rgba(0,0,0,.6);
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+ 
+blockquote cite:before {
+	content: "\2014 \2009";
+	margin-right: 5px;
+}
+
+
+/* === 14. Clients section styles === */
+
+.clients li {
+	float: left;
+	margin-right: 35px;
+	margin-bottom: 20px;
+	list-style: none;
+}
+
+.clients a {
+	opacity: 0.2;
+	text-decoration: none;
+	border: 0;
+}
+
+.clients a:hover {
+	opacity: 1;
+}
+
+.clients img {
+	max-height: 50px;
+}
+
+
+/* === 15. Contacts section styles === */
+
+input[type=text], input[type=email], input[type=password], input[type=number], select, textarea {
+	padding: 25px;
+	border-radius: 0;
+	color: rgba(0,0,0,.7);
+	border: 1px solid rgb(247, 247, 247);
+	background: #fdfdfd;
+}
+
+input, select, textarea {
+	border: none;
+	width: 100%;
+	outline: 0;
+	font-family: "Open Sans", sans-serif;
+	-webkit-appearance: none;
+	margin: 0 0 20px;
+	font-size: 16px;
+	font-weight: 300;
+}
+
+textarea {
+	display: block;
+	resize: vertical;
+	border: 1px solid rgb(247, 247, 247);
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	background: #ececec;
+}
+
+input[type=submit] {
+	padding: 25px;
+	margin-bottom: 0;
+	color: rgba(0,0,0,.7);
+	background: #f7f7f7;
+	border: 1px solid rgb(243, 243, 243);
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+input, a, img
+textarea {
+	outline:none;
+}
+
+.contact-two {
+	margin-right: 15px;
+}
+
+
+/* === 16. Footer section styles === */
+
+footer {
+    color: #333;
+	padding: 70px;
+	margin-top: -100px;
+	text-align: center;
+}
+
+p.footer-copyright {
+	margin-bottom: 10px;
+}
+
+.foot-break {
+	display: none;
+}
+
+
+/* === 17. emailsent.html styles === */
+
+.small-container {
+	max-width: 470px;
+	border: 1px solid rgb(239, 239, 239);
+	background: #fff;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.success-msg {
+	padding: 80px;
+}
+
+.success-msg i {
+	margin-right: 10px;
+}
+
+
+/* === 18. Preloader === */
+
+#preloader {
+	display: block;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	background: #fefefe url(../img/svg/preloader.svg) center center no-repeat;
+	background-size: 75px;
+}
+
+
+/* === 19. Responsive settings === */
+
+/* === 19.1 Large devices. Desktops (<1200px) === */
+
+@media screen and (max-width: 1199px) {
+	.logo:after {
+		right: -13px;
+		width: 112px;
+	}
+
+	#iconlist {
+		padding-left: 2em;
+}
+
+	.portfolio-description {
+		height: 200px;
+		font-size: 10px;
+	}
+
+}
+
+/* === 19.1b Large devices. Desktops (<1200px) === */
+
+@media screen and (max-width: 1180px) {
+	.logo:after {
+		right: -13px;
+	}
+}
+
+
+/* === 19.2 Medium devices. Laptops and Tablets (<1000px) === */
+
+@media screen and (max-width: 991px) {
+
+	.contact-list-text {
+		font-size: 9.5px;
+	}
+
+	#git {
+		padding-left: 2.5em;
+	}
+
+	.profession-subtitle {
+		font-size: 26px;
+	}
+
+	.portfolio-description-title {
+		font-size: 16px;
+	}
+
+	.portfolio-item {
+		margin-left: 42px;
+		width: 200px;
+	}
+
+	.portfolio-description {
+		height: 195px;
+	}
+
+	.portfolio-p {
+		font-size: 8px;
+	}
+
+	.hero {
+		padding: 80px;
+		margin-top: 0;
+	}
+
+	.section {
+		padding: 0px 80px 80px 80px;
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+
+	.logo {
+		width: -25%;
+	}
+	
+	.logo img {
+		width: 180px;
+		text-align: left;
+		padding-right: 104px;
+		margin-top: .5em;
+		margin-right: 4.8em;
+	}
+
+	.signature img {
+		padding-right: 2.5em;
+	}
+
+	.interests {
+		margin-top: -55px;
+	}
+
+	.interests-block {
+		margin-top: -95px;
+	}
+
+	.education {
+		margin-top: -15px;
+	}
+
+	#education {
+		margin-left: 4.5em;	
+	}
+
+	#contact {
+		margin-left: 4.5em;	
+	}
+
+	.contact-list-text {
+		margin-bottom: 10px !important;
+	}
+	
+	.label {
+		text-align: left;
+		margin-bottom: 35px;
+	}
+	
+	.label .num:before {
+		right: -62px;
+		left: inherit !important;
+	}
+
+	.logo:after {
+		content: "";
+		width: 78.2px;
+		height: 119px;
+		bottom: 0px;
+		right: -10px;
+		position: absolute;
+		display: inline-block;
+		z-index: 5;
+	}
+}
+
+/* === 19.3 Small devices Phones (<800px) === */
+
+@media screen and (max-width: 767px) {
+
+	.topnav a {
+		font-size: 15px;
+	}
+
+	.topnav a.active {
+		font-size: 18px;
+	}
+
+	#preloader {
+		margin-left: 120px;
+	}
+
+
+	.profession-subtitle {
+		font-size: 26px;
+	}
+
+	.portfolio-description-title {
+		font-size: 18px;
+	}
+
+	.contact-list-title {
+		font-size: 11px;
+	}
+
+	.contact-list-text {
+		font-size: 9px;
+	}
+
+
+	.logo {
+		margin-right: 350px;
+	}
+
+	.logo img {
+		width: 230px;
+	}
+
+	.logo:after {
+		content: "";
+		width: 110px;
+		height: 119px;
+		bottom: 0px;
+		right: -10px;
+		position: absolute;
+		display: inline-block;
+		z-index: 5;
+	}
+
+	.signature img {
+		margin-right: 300px;;
+	}
+
+	.container {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	#phone {
+		padding-left: 4.5em;
+	}
+	
+	.hero {
+		padding: 30px;
+		margin-top: 0;
+	}
+
+	#intro {
+		margin-top: 7em;
+	}
+
+	.bio {
+		margin-top: -1em;
+	}
+
+	.portfolio-description-title {
+		font-size: 9px;
+	}
+
+	.portfolio-description {
+		height: 140px;
+	}
+
+	#interests {
+		margin-top: -4em;
+	}
+
+	.interests-block {
+		margin-left: 60px;
+		margin-top: 2px;
+	}
+
+	#education {
+		padding-right: 150px;
+	}
+
+	#contact {
+		padding-right: 130px;
+	}
+
+	.section {
+		padding: 0 30px 30px 30px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	
+	ul.pricing {
+		margin-bottom: 20px;
+	}
+	
+	.timeline-table  .timeline-table-content {
+		width: 100%;
+	}
+	
+	.timeline-table .timeline-table-date {
+		float: left;
+		width: 100%;
+		margin: 5px 0 0 0;
+		padding: 0;
+	}
+	
+	.success-msg {
+		padding: 60px 30px;
+	}
+	
+	input[type=text], input[type=submit], input[type=email], input[type=password], input[type=number], select, textarea {
+		padding: 20px;
+	}
+	
+	footer {
+		margin-top: -50px;
+	}
+}
+
+	/* === 19.4 Extra-small devices Phones (<600px) === */
+
+@media screen and (max-width: 575px) {
+
+	.logo img {
+		width: 230px;
+	}
+
+	.logo:after {
+		content: none;
+	}
+
+	.signature img {
+		margin-right: 338px;
+	}
+
+	.contact-list {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#intro {
+		margin-top: 5em; 
+	}
+
+	#phone {
+		font-size: 5px;
+	}
+
+	#email {
+		font-size: 5px;
+		padding-left: 4em;
+	}
+
+	.iconList {
+		display: block;
+		}
+
+	#git {
+		padding-right: 3em;
+	}
+
+	#linkedin {
+		padding-left: 2.5em;
+	}
+
+	#resume {
+		padding-left: 2.5em;
+	}
+
+	.portSmall {
+		margin-left: 90px;
+	}
+
+	.timeline-table {
+		margin-left: 70px;
+		width: 85%;
+	}
+
+	.contact {
+		margin-left: 75px;
+	}
+
+	.footer-copyright {
+		margin-left: 30px;
+	}
+
+	.footer-social-media {
+		margin-left: 50px;
+	}
+}
+
+@media screen and (max-width: 555px) {
+	.signature img {
+		margin-right: 310px;
+	}
+}
+
+		/* === 19.4b Extra-small devices Phones (<540px) === */
+
+@media screen and (max-width: 535px) {
+
+	.topnav a.active {
+		padding-top: 0.70em;
+		font-size: 10.5px;
+	}
+
+	.topnav a {
+		padding-top: 1em;
+		font-size: 7.5px;
+	}
+
+	.contact-list-text {
+		font-size: 7px;
+	}
+	.timeline-table {
+		margin-left: 72px;
+		font-size: 2px;
+		width: 75%;
+	}
+
+	.signature img {
+		margin-right: 300px;
+	}
+
+	.firstrow {
+		padding-left: 20px;
+	}
+
+	.interests {
+		margin-left: 0px;
+	}
+
+
+	.React {
+		padding-right: 30px;
+	}
+
+
+	.footer-copyright {
+		font-size: 11px;
+	}
+
+	.footer-social-media {
+		margin-left: 50px;
+	}
+}
+
+@media screen and (max-width: 512px) {
+	.signature img {
+		margin-right: 270px;
+	}
+	.interests-block {
+		margin-left: 40px; 
+	}
+}
+
+	/* === 19.4c Extra-small devices Phones (<500px) === */
+
+@media screen and (max-width: 490px) {
+	.firstrow {
+		padding-left: 6px;
+	}
+
+	.signature img {
+		margin-right: 250px;
+	}
+
+	.contact-one {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2.5em;
+	}
+
+	.contact-list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#intro {
+		margin-top: 15em; 
+	}
+
+	.location p {
+		font-size: 12px;
+	}
+
+	.phone p {
+		font-size: 12px;
+	}
+
+	#phone {
+		padding-left: 3.25em;
+	}
+
+	.email p {
+		font-size: 12px;
+	}
+
+	#git {
+		padding-left: 0em;
+		padding-right: 0em;
+	}
+
+	#linkedin {
+		padding-left: 1em;
+	}
+
+	#resume {
+		padding-left: 1em;
+	}
+
+	#iconlist {
+		padding-left: 1.25em;
+		margin-top: 0.5em;
+	}
+
+	.portSmall {
+		margin-left: 60px;
+	}
+
+	.interests-block {
+		margin-left: 20px; 
+	}
+
+	.timeline-table {
+		margin-left: 55px;
+		font-size: 2px;
+		width: 75%;
+	}
+
+	.contact {
+		margin-left: 60px;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.signature img {
+		margin-right: 225px;
+	}
+
+	.interests-block {
+		margin-left: 16px; 
+	}
+}
+
+		/* === 19.4d Extra-small devices Phones (<450px) === */
+
+@media screen and (max-width: 455px) {
+	#intro {
+			margin-top: 17em;
+	}
+}
+
+@media screen and (max-width: 449px) {
+
+	.topnav a.active {
+		padding-top: 0.70em;
+		font-size: 12px;
+	}
+
+	.topnav a {
+		padding-top: 1em;
+		font-size: 9px;
+	}
+
+	.signature img {
+		margin-right: 205px;
+	}
+
+	.portSmall {
+		margin-left: 35px;
+	}
+
+	.timeline-table {
+		margin-left: 40px;
+		font-size: 2px;
+		width: 75%;
+	}
+
+	.timeline-table  .timeline-table-content > em {
+		font-size: 9px;
+	}
+
+	.educ-desc {
+		display: block;
+	}
+
+	.contact {
+		margin-left: 40px;
+	}
+
+	.footer-copyright {
+		font-size: 11px;
+		margin-right: 5px;
+
+	}
+
+	.footer-social-media {
+		margin-left: 30px;
+	}
+
+}
+
+		/* === 19.4d Extra-small devices Phones (<435px) === */
+
+@media screen and (max-width: 434px) {
+	#intro {
+		margin-top: 18.5em;
+	}
+}
+
+@media screen and (max-width: 429px) {
+
+	.portSmall {
+		margin-left: 40px;
+	}
+
+	.signature img {
+		margin-right: 190px;
+	}
+
+	.React {
+		padding-right: 10px;
+	}
+
+	#updatenewLast {
+		padding-left: 20px;
+	}
+
+	.footer-copyright {
+		font-size: 10px;
+		margin-right: 3px;
+	}
+
+	.timeline-table {
+		margin-left: 25px;
+		width: 100%;
+	}
+
+	.firstrow {
+		padding-left: 3px;
+	}
+
+	.interests-block {
+		margin-left: 12px; 
+	}
+
+	.portfolio-item {
+		margin-left: 35px;
+	}
+}
+
+@media screen and (max-width: 418px) {
+	.topnav a.active {
+		padding-top: 0.70em;
+		font-size: 10px;
+	}
+
+	.topnav a {
+		padding-top: 1em;
+		font-size: 8px;
+	}
+
+	.software-desc {
+		font-size: 12px;
+	}
+
+	.bio p {
+		font-size: 12px; 
+	}
+
+	.footer-copyright {
+		font-size: 8px;
+		margin-right: 3px;
+	}
+
+	.timeline-table {
+		margin-left: 18px;
+		width: 100%;
+	}
+
+	.signature img {
+		margin-right: 175px;
+	}
+
+	.contact {
+		margin-left: 25px;
+	}
+
+	.interests-block {
+		margin-left: 2px; 
+	}
+
+}
+
+@media screen and (max-width: 396px) {
+
+	.interests-block {
+		margin-right: 20px; 
+	}
+
+	.timeline-table {
+		margin-left: 12px;
+		width: 100%;
+	}
+
+	.signature img {
+		margin-right: 155px;
+	}
+
+	.contact {
+		margin-left: 20px;
+	}
+
+	#updatenewLast {
+		margin-left: 45px;
+	}
+
+	.React {
+		padding-left: 10px;
+	}
+
+	.firstrow {
+		margin-right: 180px;
+	}
+
+	.secondrow {
+		padding-right: 30px;
+	}
+
+	.topnav a.active {
+		padding-top: 0.70em;
+		font-size: 5.2px;
+	}
+
+	.topnav a {
+		padding-top: 1em;
+		font-size: 4.2px;
+	}
+}
+
+@media screen and (max-width: 390px) {
+
+	.signature img {
+		margin-right: 145px;
+	}
+
+	.contact {
+		margin-left: 15px;
+	}
+
+	.interests-block {
+		margin-left: -10px; 
+	}
+
+	.portSmall {
+		margin-left: 20px;
+	}
+
+	.timeline-table {
+		margin-left: 10px;
+		width: 120%;
+	}
+	
+}
+
+@media screen and (max-width: 362px) {
+
+	#intro {
+		margin-top: 18em;
+	}
+
+	.signature img {
+		margin-right: 115px;
+	}
+
+	.footer-copyright {
+		font-size: 7px;
+		margin-right: 3px;
+	}
+
+	.contact {
+		margin-left: -2px;
+	}
+
+	.interests-block {
+		margin-left: -30px; 
+	}
+
+	.portSmall {
+		margin-left: 5px;
+	}
+
+	.timeline-table {
+		margin-left: -18px;
+		width: 140%;
+	}
+
+	timeline-table-date {
+		font-size: 5px;
+	}
+
+	.bio p { 
+		font-size: 9.5px;
+	}
+
+	.software-desc p {
+		font-size: 9.5px;
+	}
+
+	.name-title {
+		font-size: 38px;
+	}
+
+	.profession-subtitle {
+		font-size: 22px;
+	}
+
+}
+
+@media screen and (max-width: 348px) {
+
+	#intro {
+		margin-top: 17em;
+	}
+
+	.name-title {
+		font-size: 30px;
+	}
+
+	.profession-subtitle {
+		font-size: 18px;
+	}
+
+	.signature img {
+		margin-right: 100px;
+	}
+
+	.portSmall {
+		margin-left: -8px;
+	}
+
+	.interests-block {
+		margin-left: -18px; 
+	}
+
+	.interest-block h2 {
+		font-size: 12px;
+	}
+
+	#updatenewLast {
+		margin-left: 27px;
+	}
+
+	.tech {
+		margin-right: 45px;
+	}
+
+	.foot-break {
+		display: inherit;
+		padding-top: -25px;
+	}
+
+	input[type=text], input[type=email], input[type=password], input[type=number], input[type=submit], select, textarea {
+		font-size: 12px;
+	}
+
+	textarea[placeholder=Message] {
+		font-size: 12px;
+	}
+}
+
+	@media screen and (max-width: 328px) {
+
+	.timeline-table {
+		margin-left: -24px;
+		width: 160%;
+		}
+
+	.signature img {
+		margin-right: 80px;
+		}
+
+	input[type=text], input[type=email], input[type=password], input[type=number], input[type=submit], select, textarea {
+		font-size: 10px;
+		}
+	
+	textarea[placeholder=Message] {
+		font-size: 10px;
+		}
+
+	timeline-table-date {
+		font-size: 3px;
+		}
+
+	.timeline-table  .timeline-table-content > h4 {
+		margin: 0;
+		font-size: 12px;
+		color: #000;
+		font-weight: 300;
+		}
+	
+	.timeline-table  .timeline-table-date {
+		font-size: 12px
+	}
+}
+
+@media screen and (max-width: 306px) {
+	#intro {
+		margin-top: 19em;
+	}
+
+	.signature img {
+		margin-right: 60px;
+	}
+
+	.portSmall {
+		margin-left: -23px;
+	}
+
+	.interests-block {
+		margin-left: -27px; 
+	}
+
+	#updatenewLast {
+		margin-left: 50px;
+	}
+
+	.timeline-table {
+		margin-left: -16px;
+		width: 160%;
+	}
+
+	input[type=text], input[type=email], input[type=password], input[type=number], input[type=submit], select, textarea {
+		font-size: 9px;
+		}
+	
+	textarea[placeholder=Message] {
+		font-size: 9px;
+		}
+}
+
+@media screen and (max-width: 304px) {
+	.timeline-table {
+		margin-left: -24px;
+		width: 180%;
+	}
+}
+
+@media screen and (max-width: 295px) {
+	
+		#intro {
+		margin-top: 17em;
+		}
+
+		.contact-list {
+			margin-top: -1em;
+		}
+
+		.timeline-table {
+			margin-left: -24px;
+			width: 200%;
+		}
+
+		.contact-form {
+			margin-top: -1em;
+		}
+
+		.contact {
+			margin-left: -8px;
+			width: 120%;
+		}
+
+		.name-title {
+			font-size: 24px;
+		}
+
+		.profession-subtitle {
+			font-size: 15px;
+		}
+
+}
+
+@media screen and (max-width: 288px) {
+	.contact {
+		margin-left: -14px;
+		width: 130%;
+	}
+
+	.timeline-table {
+		margin-left: -36px;
+		width: 230%;
+	}
+
+	.portSmall {
+		margin-left: -38px;
+	}
+
+	.interests-block {
+		margin-left: -43px; 
+	}
+
+	.signature img {
+		margin-right: 50px;
+	}
+
+	.footer-copyright {
+		font-size: 5px;
+		margin-right: 3px;
+	}
+}
+
+@media screen and (max-width: 280px) {
+
+	.education {
+		display: none;
+	}
+
+	.signature img {
+		margin-right: 35px;
+	}
+
+	.contact-form {
+		display: none;
+	}
+
+	.interests-block {
+		margin-left: -34px; 
+	}
+
+	.interest-block h2 {
+		font-size: 10px;
+	}
+
+	.footer-copyright {
+		font-size: 3px;
+		margin-right: 3px;
+	}
+
+	.footer-social-media a {
+		font-size: 10px;
+		display: inline; 
+	}
+
+}
+
+@media screen and (max-width: 271px) {
+	.topnav a.active {
+		padding-top: 0.70em;
+		font-size: 3.2px;
+	}
+
+	.topnav a {
+		padding-top: 1em;
+		font-size: 3.0px;
+	}
+
+}
+
+@media screen and (max-width: 256px) {
+	#intro {
+		margin-top: 20em;
+		}
+
+	.signature img {
+		margin-right: 10px;
+		}
+
+		.topnav a.active {
+			padding-top: 0.70em;
+			font-size: 2.8px;
+		}
+	
+		.topnav a {
+			padding-top: 1em;
+			font-size: 2.5px;
+		}
+
+		.bio p {
+			font-size: 7px; 
+		}
+
+		.name-title {
+			font-size: 18px;
+		}
+
+		.profession-subtitle {
+			font-size: 12px;
+		}
+
+		.interests-block {
+			margin-left: -58px; 
+		}
+
+		.portSmall {
+			margin-left: -60px;
+		}
+
+		#updatenewLast {
+			margin-left: 62px;
+		}
+}
