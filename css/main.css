@@ -57,7 +57,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 *:before, *:after{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 
@@ -411,18 +411,18 @@ a.icon {
 
 .logo:after {
 	content: "";
-	width: 119px;
-	height: 119px;
+	width: 140px;
+	height: 150px;
 	bottom: 0px;
-	right: -5px;
+	left: -3px;
 	position: absolute;
 	display: inline-block;
 	z-index: 5;
 }
 
 .logo img{
-	height: 119px;
-	width: 119px;
+	height: 150px;
+	width: 150px;
 	z-index: 10;
 	position: relative;
 }
@@ -435,6 +435,7 @@ a.icon {
 .signature img {
 	width: 119px;
 	opacity: 0.5;
+	margin-left: 20px;
 }
 
 .hero {
@@ -849,6 +850,7 @@ a.portfolio-description-title {
 
 .interests-block {
 	margin-left: 20px;
+	margin-top: -65px;
 }
 
 
@@ -859,6 +861,7 @@ a.portfolio-description-title {
 	position: relative;
 	list-style: none;
 	border: 1px solid rgb(243, 243, 243);
+	width: 80%;
 }
 .timeline-table  > li:nth-child(2n+1) {
 	background: #fbfbfb;
@@ -884,6 +887,16 @@ a.portfolio-description-title {
 }
 
 .timeline-table  .timeline-table-date {
+	float: right;
+	color: rgba(0,0,0,.7);
+	font-weight: 300;
+	font-size: 15px;
+	margin-top: 12px;
+	padding-left: 25px;
+	position: relative;
+}
+
+.timeline-table .timeline-table-date-dc {
 	float: right;
 	color: rgba(0,0,0,.7);
 	font-weight: 300;
@@ -1252,8 +1265,30 @@ p.footer-copyright {
 }
 
 	.portfolio-description {
-		height: 200px;
+		height: 220px;
 		font-size: 10px;
+	}
+
+	#digitalCrafts {
+		padding-left: -10px; 
+	}
+
+	.timeline-table {
+		width: 80%;
+	}
+
+	.timeline-table .timeline-table-date-dc {
+		float: right;
+		color: rgba(0,0,0,.7);
+		font-weight: 300;
+		font-size: 15px;
+		margin-top: 12px;
+		padding-left: 25px;
+		position: relative;
+	}
+
+	.timeline-table  .timeline-table-content > em {
+		font-size: 12px;
 	}
 
 }
@@ -1300,6 +1335,10 @@ p.footer-copyright {
 		font-size: 8px;
 	}
 
+	.portSmall {
+		margin-left: 25px;
+	}
+
 	.hero {
 		padding: 80px;
 		margin-top: 0;
@@ -1311,20 +1350,27 @@ p.footer-copyright {
 		margin-bottom: 80px;
 	}
 
-	.logo {
-		width: -25%;
-	}
-	
 	.logo img {
-		width: 180px;
-		text-align: left;
-		padding-right: 104px;
-		margin-top: .5em;
-		margin-right: 4.8em;
+		width: 120px;
+	}
+
+	.col-md-2 .logo {
+		margin-left: -120px;
+	}
+
+	.logo:after {
+		content: "";
+		width: 110px;
+		height: 150px;
+		bottom: 0px;
+		left: 60px;
+		position: absolute;
+		display: inline-block;
+		z-index: 5;
 	}
 
 	.signature img {
-		padding-right: 2.5em;
+		margin-left: -100px;
 	}
 
 	.interests {
@@ -1333,14 +1379,28 @@ p.footer-copyright {
 
 	.interests-block {
 		margin-top: -95px;
+		margin-left: 90px;
 	}
 
-	.education {
-		margin-top: -15px;
+	.secondrow {
+		padding-left: 25px;
 	}
 
-	#education {
-		margin-left: 4.5em;	
+	.thirdrow {
+		padding-left: 25px;
+	}
+
+	.lastrow {
+		padding-left: 50px;
+	}
+
+	.timeline-table {
+		margin-left: 6em;
+		width: 80%;
+	}
+
+	.timeline-table .timeline-table-date-dc {
+		
 	}
 
 	#contact {
@@ -1361,16 +1421,7 @@ p.footer-copyright {
 		left: inherit !important;
 	}
 
-	.logo:after {
-		content: "";
-		width: 78.2px;
-		height: 119px;
-		bottom: 0px;
-		right: -10px;
-		position: absolute;
-		display: inline-block;
-		z-index: 5;
-	}
+	
 }
 
 /* === 19.3 Small devices Phones (<800px) === */
@@ -1389,6 +1440,30 @@ p.footer-copyright {
 		margin-left: 120px;
 	}
 
+	.logo img {
+		width: 120px;
+		margin-right: 330px;
+	}
+
+	.col-md-2 .logo {
+		margin-left: -65px;
+	}
+
+	.logo:after {
+		content: "";
+		width: 110px;
+		height: 150px;
+		bottom: 0px;
+		left: 60px;
+		position: absolute;
+		display: inline-block;
+		z-index: 5;
+	}
+
+	.signature img {
+		margin-right: 320px;
+	}
+
 
 	.profession-subtitle {
 		font-size: 26px;
@@ -1396,6 +1471,10 @@ p.footer-copyright {
 
 	.portfolio-description-title {
 		font-size: 18px;
+	}
+
+	.portSmall {
+		margin-left: -37px;
 	}
 
 	.contact-list-title {
@@ -1406,29 +1485,6 @@ p.footer-copyright {
 		font-size: 9px;
 	}
 
-
-	.logo {
-		margin-right: 350px;
-	}
-
-	.logo img {
-		width: 230px;
-	}
-
-	.logo:after {
-		content: "";
-		width: 110px;
-		height: 119px;
-		bottom: 0px;
-		right: -10px;
-		position: absolute;
-		display: inline-block;
-		z-index: 5;
-	}
-
-	.signature img {
-		margin-right: 300px;;
-	}
 
 	.container {
 		margin-top: 20px;
@@ -1465,7 +1521,7 @@ p.footer-copyright {
 	}
 
 	.interests-block {
-		margin-left: 60px;
+		margin-left: -20px;
 		margin-top: 2px;
 	}
 
@@ -1473,9 +1529,6 @@ p.footer-copyright {
 		padding-right: 150px;
 	}
 
-	#contact {
-		padding-right: 130px;
-	}
 
 	.section {
 		padding: 0 30px 30px 30px;
@@ -1487,15 +1540,9 @@ p.footer-copyright {
 		margin-bottom: 20px;
 	}
 	
-	.timeline-table  .timeline-table-content {
-		width: 100%;
-	}
-	
-	.timeline-table .timeline-table-date {
-		float: left;
-		width: 100%;
-		margin: 5px 0 0 0;
-		padding: 0;
+	.timeline-table {
+		width: 120%;
+		margin-left: 35px;
 	}
 	
 	.success-msg {
@@ -1516,11 +1563,19 @@ p.footer-copyright {
 @media screen and (max-width: 575px) {
 
 	.logo img {
-		width: 230px;
+		width: 150px;
+		margin-left: 20px;
 	}
 
 	.logo:after {
-		content: none;
+		content: "";
+		width: 80px;
+		height: 150px;
+		bottom: 0px;
+		left: 65px;
+		position: absolute;
+		display: inline-block;
+		z-index: 5;
 	}
 
 	.signature img {
@@ -1562,12 +1617,33 @@ p.footer-copyright {
 	}
 
 	.portSmall {
-		margin-left: 90px;
+		margin-left: 20px;
+	}
+
+	.portfolio-item {
+		width: 75%;
+	}
+
+	.portfolio-description-title {
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.portfolio-p {
+		font-size: 10px;
+	}
+
+	.thirdrow {
+		padding-left: 15px;
+	}
+
+	.lastrow {
+		padding-left: 30px;
 	}
 
 	.timeline-table {
-		margin-left: 70px;
-		width: 85%;
+		margin-left: 87px;
+		width: 95%;
 	}
 
 	.contact {
@@ -1584,8 +1660,14 @@ p.footer-copyright {
 }
 
 @media screen and (max-width: 555px) {
+
+	.logo img {
+		width: 150px;
+		margin-left: 65px;
+	}
+
 	.signature img {
-		margin-right: 310px;
+		margin-right: 320px;
 	}
 }
 
@@ -1593,23 +1675,36 @@ p.footer-copyright {
 
 @media screen and (max-width: 535px) {
 
+	
+
+	.hero {
+		padding: 30px;
+		margin-top: 0;
+	}
+
+	.section {
+		padding: 0 30px 30px 30px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
 	.topnav a.active {
 		padding-top: 0.70em;
-		font-size: 10.5px;
+		font-size: 14.5px;
 	}
 
 	.topnav a {
 		padding-top: 1em;
-		font-size: 7.5px;
+		font-size: 12.5px;
 	}
 
 	.contact-list-text {
 		font-size: 7px;
 	}
+
 	.timeline-table {
-		margin-left: 72px;
-		font-size: 2px;
-		width: 75%;
+		width: 115%;
+		margin-left: 60px;
 	}
 
 	.signature img {
@@ -1643,9 +1738,7 @@ p.footer-copyright {
 	.signature img {
 		margin-right: 270px;
 	}
-	.interests-block {
-		margin-left: 40px; 
-	}
+
 }
 
 	/* === 19.4c Extra-small devices Phones (<500px) === */
@@ -1690,6 +1783,10 @@ p.footer-copyright {
 		font-size: 12px;
 	}
 
+	.secondrow {
+		padding-left: 10px;
+	}
+
 	#git {
 		padding-left: 0em;
 		padding-right: 0em;
@@ -1709,31 +1806,51 @@ p.footer-copyright {
 	}
 
 	.portSmall {
-		margin-left: 60px;
+		margin-left: 20px;
+	}
+
+	.portfolio-item {
+		width: 75%;
 	}
 
 	.interests-block {
-		margin-left: 20px; 
-	}
-
-	.timeline-table {
-		margin-left: 55px;
-		font-size: 2px;
-		width: 75%;
+		margin-left: -30px;
 	}
 
 	.contact {
 		margin-left: 60px;
 	}
+
+	.footer-social-media {
+		margin-left: 30px;
+	}
 }
 
-@media screen and (max-width: 470px) {
-	.signature img {
-		margin-right: 225px;
+@media screen and (max-width: 478px) {
+
+	.portfolio-description {
+		height: 160px;
+	}
+
+	.portfolio-description-title {
+		text-align: center;
+		font-size: 12px;
+	}
+
+	.timeline-table {
+		width: 145%;
+		margin-left: 30px;
 	}
 
 	.interests-block {
-		margin-left: 16px; 
+		margin-left: -40px;
+	}
+
+}
+
+@media screen and (max-width: 464px) {
+	.signature img {
+		margin-right: 230px;
 	}
 }
 
@@ -1747,36 +1864,23 @@ p.footer-copyright {
 
 @media screen and (max-width: 449px) {
 
-	.topnav a.active {
-		padding-top: 0.70em;
-		font-size: 12px;
-	}
-
-	.topnav a {
-		padding-top: 1em;
-		font-size: 9px;
-	}
 
 	.signature img {
 		margin-right: 205px;
 	}
 
-	.portSmall {
-		margin-left: 35px;
-	}
 
 	.timeline-table {
-		margin-left: 40px;
-		font-size: 2px;
-		width: 75%;
+		width: 145%;
+		margin-left: 30px;
 	}
 
-	.timeline-table  .timeline-table-content > em {
-		font-size: 9px;
+	.interests-block {
+		margin-left: -50px;
 	}
 
-	.educ-desc {
-		display: block;
+	.lastrow {
+		padding-left: 50px;
 	}
 
 	.contact {
@@ -1786,8 +1890,7 @@ p.footer-copyright {
 	.footer-copyright {
 		font-size: 11px;
 		margin-right: 5px;
-
-	}
+}
 
 	.footer-social-media {
 		margin-left: 30px;
@@ -1797,28 +1900,38 @@ p.footer-copyright {
 
 		/* === 19.4d Extra-small devices Phones (<435px) === */
 
-@media screen and (max-width: 434px) {
+@media screen and (max-width: 435px) {
+	.portfolio-item {
+		width: 80%;
+	}
+
+	.interest-block i {
+		font-size: 28px;
+	}
+	.interest-block h2 {
+		font-size: 12px;
+	}
+
+	.lastrow {
+		padding-left: 35px;
+	}
+
+	.firstrow {
+		padding-left: 25px;
+	}
+}
+
+@media screen and (max-width: 432px) {
 	#intro {
-		margin-top: 18.5em;
+		margin-top: 19em;
 	}
 }
 
 @media screen and (max-width: 429px) {
 
-	.portSmall {
-		margin-left: 40px;
-	}
 
 	.signature img {
 		margin-right: 190px;
-	}
-
-	.React {
-		padding-right: 10px;
-	}
-
-	#updatenewLast {
-		padding-left: 20px;
 	}
 
 	.footer-copyright {
@@ -1826,37 +1939,19 @@ p.footer-copyright {
 		margin-right: 3px;
 	}
 
-	.timeline-table {
-		margin-left: 25px;
-		width: 100%;
-	}
+}
 
-	.firstrow {
-		padding-left: 3px;
-	}
+@media screen and (max-width: 426px) {
 
-	.interests-block {
-		margin-left: 12px; 
-	}
-
-	.portfolio-item {
-		margin-left: 35px;
+.timeline-table {
+	width: 155%;
 	}
 }
 
 @media screen and (max-width: 418px) {
-	.topnav a.active {
-		padding-top: 0.70em;
-		font-size: 10px;
-	}
 
-	.topnav a {
-		padding-top: 1em;
-		font-size: 8px;
-	}
-
-	.software-desc {
-		font-size: 12px;
+	#intro {
+		margin-top: 19em;
 	}
 
 	.bio p {
@@ -1864,98 +1959,66 @@ p.footer-copyright {
 	}
 
 	.footer-copyright {
-		font-size: 8px;
+		font-size: 9px;
 		margin-right: 3px;
 	}
 
-	.timeline-table {
-		margin-left: 18px;
-		width: 100%;
+	.footer-social-media {
+		margin-left: 30px;
 	}
 
 	.signature img {
-		margin-right: 175px;
+		margin-right: 180px;
 	}
 
-	.contact {
-		margin-left: 25px;
+	.portfolio-item {
+		width: 90%;
+		margin-left: 0px;
 	}
+
+	.timeline-table {
+		width: 165%;
+		margin-left: 20px;
+		}
 
 	.interests-block {
-		margin-left: 2px; 
+		margin-left: -50px;
 	}
+
+}
+
+@media screen and (max-width: 402px) {
+	.timeline-table {
+		width: 175%;
+		margin-left: 10px;
+		}
+
+	.topnav a.active {
+		font-size: 11px;
+		}
+	
+	.topnav a {
+		font-size: 9px;
+		}
 
 }
 
 @media screen and (max-width: 396px) {
 
-	.interests-block {
-		margin-right: 20px; 
-	}
-
 	.timeline-table {
-		margin-left: 12px;
-		width: 100%;
-	}
+		width: 185%;
+		margin-left: 0px;
+		}
 
 	.signature img {
-		margin-right: 155px;
-	}
-
-	.contact {
-		margin-left: 20px;
-	}
-
-	#updatenewLast {
-		margin-left: 45px;
-	}
-
-	.React {
-		padding-left: 10px;
-	}
-
-	.firstrow {
-		margin-right: 180px;
-	}
-
-	.secondrow {
-		padding-right: 30px;
-	}
-
-	.topnav a.active {
-		padding-top: 0.70em;
-		font-size: 5.2px;
-	}
-
-	.topnav a {
-		padding-top: 1em;
-		font-size: 4.2px;
+		margin-right: 158px;
 	}
 }
 
-@media screen and (max-width: 390px) {
-
-	.signature img {
-		margin-right: 145px;
+@media screen and (max-width: 386px) {
+	.foot-break {
+		display:block;
 	}
-
-	.contact {
-		margin-left: 15px;
-	}
-
-	.interests-block {
-		margin-left: -10px; 
-	}
-
-	.portSmall {
-		margin-left: 20px;
-	}
-
-	.timeline-table {
-		margin-left: 10px;
-		width: 120%;
-	}
-	
 }
 
 @media screen and (max-width: 362px) {
@@ -2109,7 +2172,15 @@ p.footer-copyright {
 	}
 
 	.portSmall {
-		margin-left: -23px;
+		margin-left: 150px;
+	}
+
+	.portfolio-item {
+		width: 150%;
+	}
+
+	.software-desc {
+		margin-right: auto;
 	}
 
 	.interests-block {

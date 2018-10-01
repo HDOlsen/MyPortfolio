@@ -31,7 +31,6 @@
 		<a href="#about">About Me</a>
 		<a href="#portfolio">Portfolio</a>
 		<a href="#skills">Skills</a>
-		<a href="#contact">Contact</a>
 </div>
 
 	<!-- BEGIN SECTION "hero" -->
@@ -68,7 +67,7 @@
 						</div>  
 						<div class="col-md-3 col-sm-6 col-xs-12 email" id="email">
 							<p class="contact-list-title"><i class="ion-ios-email-outline"></i>Email</p>
-							<p class="contact-list-text"><a href="#" style="text-decoration:none !important">hutson@hutsondolsen.com</a></p>
+							<p class="contact-list-text"><a href="mailto:hutson@hutsondolsen.com" style="text-decoration:none !important">hutson@hutsondolsen.com</a></p>
 						</div>
 						<div class="col-md-3 col-sm-6 col-xs-12 iconList" id="iconlist">
 							<a href="https://github.com/HDOlsen" class="icon pt-4 " id="git" target="_blank"><ion-icon style="height:20px; width:20px" name="logo-github"></ion-icon></a>
@@ -182,7 +181,7 @@
 						</div>
 						<!-- begin modal box 3 content -->
 						<div id="image-modal-1" class="modal-box mfp-hide">
-							<img src="img/Workout.jpg" alt="work">
+							<img src="img/Workout.jpg" alt="work" style="width:100%">
 							<div class="modal-box-content">
 								<div class="portfolio-category-tag"></div>
 								<ul class="modal-head" >Primary Technologies: 
@@ -212,7 +211,7 @@
 						</div>
 						<!-- begin modal box 4 content -->
 						<div id="image-modal-2" class="modal-box mfp-hide">
-							<img src="img/petFront.jpg" alt="work" >
+							<img src="img/petFront.jpg" alt="work" style="width:100%">
 							<div class="modal-box-content">
 								<div class="portfolio-category-tag"></div>
 								<ul class="modal-head" >Primary Technologies: 
@@ -253,12 +252,12 @@
 					<i class="devicon-javascript-plain"></i>
 					<h2>JavaScript</h2>
 				</div>
-			</div>
-			<div id="containernew" class="secondrow">
 				<div class="interest-block" id="updatenew" href="#">
 					<i class="devicon-jquery-plain"></i>
 					<h2>jQuery</h2>
 				</div>
+			</div>
+			<div id="containernew" class="secondrow">
 				<div class="interest-block" id="updatenew" href="#">
 					<i class="devicon-nodejs-plain"></i>
 					<h2>Node.js</h2>
@@ -267,25 +266,41 @@
 					<i class="devicon-express-original"></i>
 					<h2>Express</h2>
 				</div>
-			</div>
-			<div id="containernew" class="React">
+				<div class="interest-block" id="updatenew" href="#">
+					<i class="devicon-react-original"></i>
+					<h2>React</h2>
+				</div>
 				<div class="interest-block" id="updatenew" href="#">
 					<i class="devicon-python-plain"></i>
 					<h2>Python</h2>
 				</div>
+			</div>
+			<div id="containernew" class="thirdrow">
 				<div class="interest-block" id="updatenew" href="#">
-					<i class="devicon-react-original"></i>
-					<h2>React</h2>
+					<i class="devicon-bootstrap-plain"></i>
+					<h2>Bootstrap</h2>
+				</div>
+				<div class="interest-block" id="updatenew" href="#">
+					<i class="devicon-sass-original"></i>
+					<h2>Saas</h2>
+				</div>
+				<div class="interest-block" id="updatenew" href="#">
+					<i class="devicon-mocha-plain"></i>
+					<h2>Mocha.js</h2>
 				</div>
 				<div class="interest-block" id="updatenew" href="#">
 					<i class="devicon-git-plain"></i>
 					<h2>Git</h2>
 				</div>
 			</div>
-			<div id="containernew">
-				<div class="interest-block" id="updatenewLast" href="#">
-					<i class="devicon-bootstrap-plain"></i>
-					<h2>Bootstrap</h2>
+			<div id="containernew" class="lastrow">
+				<div class="interest-block" id="updatenew" href="#">
+					<i class="devicon-amazonwebservices-original"></i>
+					<h2>AWS</h2>
+				</div>
+				<div class="interest-block" id="updatenew" href="#">
+					<i class="devicon-heroku-original"></i>
+					<h2>Heroku</h2>
 				</div>
 			</div>
 		</div>
@@ -307,10 +322,10 @@
 						<div class="timeline-table-content">
 							<h4>DigitalCrafts</h4>
 							<br class="educ-desc"></br>
-							<em>16-week Immersive Full-Stack Software Development Program</em>
+							<em>Certificate, Full-Stack Software</em>
 						</div>
-						<div class="timeline-table-date">
-							2018 – 2018
+						<div class="timeline-table-date-dc">
+							2018
 						</div>
 					</li>
 					<li>
@@ -320,7 +335,7 @@
 							<em>Master's Degree</em>
 						</div>
 						<div class="timeline-table-date">
-							2009 – 2012
+							2012
 						</div>
 					</li>
 					<li>
@@ -330,7 +345,7 @@
 							<em>Master's Degree</em>
 						</div>
 						<div class="timeline-table-date">
-							2005 – 2006
+							2006
 						</div>
 					</li>
 				</ul>
@@ -338,52 +353,6 @@
 		</div>
 	</div>
 	<!-- END SECTION "education" -->
-
-	<!-- START SECTION "contact" -->
-	<div class="section contact-form">
-		<div class="row">
-			<div class="col-md-2">
-				<div class="label contact-two">
-					<span class="num">Contact</span>
-					<span class="name">Contact form</span>
-				</div>
-			</div>
-			<div class="col-md-offset-1 col-sm-12 col-md-9" id="contact">
-				<form id="mail" class="contact" action="php/mailscript.php" method="post">
-				<div class="row">
-					<div class="col-sm-6">
-						<input placeholder="First Name" required="required" name="first_name" type="text">
-					</div>
-					<div class="col-sm-6">
-						<input placeholder="Last Name" required="required" name="last_name" type="text">
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-6">
-						<input placeholder="Email Address" required="required" name="email" type="email">
-					</div>
-					<div class="col-sm-6">
-						<input placeholder="Subject" required="required" name="subject" type="text">
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-12">
-						<textarea placeholder="Message" required="required" name="massage" cols="50" rows="10"></textarea>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-sm-12">
-						<input type="submit" name="submit" value="Send Message">
-					</div>
-				</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- END SECTION "contact" -->
 
 	<!-- BEGIN FOOTER -->
 	<footer>
@@ -393,7 +362,7 @@
 				<p class="footer-social-media">
 					<a href="https://github.com/HDOlsen" class="icon" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
 					<a href="https://www.linkedin.com/in/hutson-olsen-419309163/" class="icon" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-					<a href="#" class="icon" target="_blank"><ion-icon name="document"></ion-icon></a>
+					<a href="https://hutsondolsen.com/documents/Hutson Olsen Resume 2018a.pdf" class="icon" target="_blank"><ion-icon name="document"></ion-icon></a>
 				</p>
 			</div>
 		</div>
