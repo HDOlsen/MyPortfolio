@@ -796,6 +796,18 @@ a.portfolio-description-title {
 	font-size: 8px;
 }
 
+.tech {
+	margin-right: 2em;
+}
+
+#portfolio {
+	margin-right: .5em;
+}
+
+.educ-col {
+	margin-left: 1em;
+}
+
 .interests-block {
 	margin-top: -4em;
 }
