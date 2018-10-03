@@ -57,7 +57,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 *:before, *:after{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	box-sizing: border-box
 }
 
 
@@ -360,6 +360,7 @@ a.icon {
 	font-size: 20px;
 }
 
+
 .container {
 	border: 1px solid rgb(239, 239, 239);
 	background: #fff;
@@ -411,18 +412,20 @@ a.icon {
 
 .logo:after {
 	content: "";
-	width: 140px;
-	height: 150px;
-	bottom: 0px;
-	left: -3px;
+	width: 160px;
+	height: 160px;
+	bottom: -15px;
+	right: -30px;
 	position: absolute;
 	display: inline-block;
 	z-index: 5;
 }
 
 .logo img{
-	height: 150px;
-	width: 150px;
+	top: 10px;
+	right: 10px;
+	height: 160px;
+	width: 160px;
 	z-index: 10;
 	position: relative;
 }
@@ -530,15 +533,16 @@ div.bio {
 .about-me {
 	margin-right: 40px;
 }
-/* === 6. Portfolio section styles === */
 
-#portfolio {
-	margin-top: -20px;
-	margin-right: 10px;
-}
+
+/* === 6. Portfolio section styles === */
 
 .portfolio-item {
 	margin-bottom: 20px;
+}
+
+#portfolio {
+	margin-top: -20px;
 }
 
 .portfolio-image  {
@@ -579,14 +583,12 @@ div.bio {
 
 .portfolio-category-tag {
 	background: #f5f5f5;
-	opacity: 0.0;
 	color: #363636;
 	display: inline-block;
 	margin: 0 0 10px;
     padding: 2px 6px;
     vertical-align: top;
-	font-size: 13px;
-	text-align: center;
+    font-size: 13px;
     border-radius: 2px;
     -khtml-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -601,7 +603,7 @@ div.bio {
 	color: #000;
 	font-size: 17px;
 	font-weight: 600;
-	
+	text-align: center;
 }
 
 a.portfolio-description-title {	
@@ -610,31 +612,6 @@ a.portfolio-description-title {
 	display: block;
 	margin-left: 18px;
 }
-
-#containernew {
-	display: table;
-	margin:auto;
-	border-spacing: 30px;
-}
-
-#updatenew {
-    display: table-cell;
-    vertical-align: middle;
-	text-align: center;
-	padding:4px;
-}
-
-.updatenewLast {
-	display: table-cell;
-    vertical-align: middle;
-	text-align: center;
-	padding:4px;
-}
-
-.firstrow {
-	border-right: 10px solid transparent;
-}
-
 
 
 /* === 6.1 Modal box styles === */
@@ -706,6 +683,7 @@ a.portfolio-description-title {
 	font-size: 16px;
 	font-family: 'Old Standard TT', serif;
 }
+
 
 /* 7. Pricing section styles */
 
@@ -791,14 +769,6 @@ a.portfolio-description-title {
 
 /* 8. Interests section styles */
 
-.interests {
-	margin-top: -55px; 
-}
-
-.tech {
-	margin-right: 35px;
-}
-
 .interest-block {
 	text-align: center;
 }
@@ -812,7 +782,7 @@ a.portfolio-description-title {
 }
 
 .interest-block h2 {
-	font-size: 18px;
+	font-size: 16px;
 	margin-top: 2em;
 }
 
@@ -822,37 +792,28 @@ a.portfolio-description-title {
 	line-height: 23px;
 }
 
-.interest-blocks {
-	text-align: center;
-	padding-left: 7em;
-}
-
-.interest-blocks i {
-	font-size: 35px;
-	line-height: 0;
-	color: #a9a9a9;
-	display: block;
-	margin-bottom: 2px;
-}
-
-.interest-blocks h2 {
-	font-size: 18px;
-	margin-top: 2em;
-}
-
-.interest-blocks svg {
-	width: 65px;
-	height: 100px;
-	color: #a9a9a9;
-	fill: #a9a9a9;
-	vertical-align: top;
+.skill {
+	font-size: 8px;
 }
 
 .interests-block {
-	margin-left: 20px;
-	margin-top: -65px;
+	margin-top: -4em;
 }
 
+#containernew {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#updatenew {
+	margin-left: 3em;
+	margin-top: 2em;
+}
+
+.interests {
+	margin-top: -65px;
+}
 
 /* === 9. Education section styles === */
 
@@ -927,12 +888,8 @@ a.portfolio-description-title {
 	display: none;
 }
 
-.firstrow {
-	padding-left: 20px;
-}
-
-.React {
-	padding-right: 30px;
+.education {
+	margin-top: -25px;
 }
 
 
@@ -1190,10 +1147,6 @@ textarea {
 	outline:none;
 }
 
-.contact-two {
-	margin-right: 15px;
-}
-
 
 /* === 16. Footer section styles === */
 
@@ -1255,10 +1208,13 @@ p.footer-copyright {
 /* === 19.1 Large devices. Desktops (<1200px) === */
 
 @media screen and (max-width: 1199px) {
+
 	.logo:after {
-		right: -13px;
-		width: 112px;
-	}
+	width: 160px;
+	height: 160px;
+	bottom: -20px;
+	right: -62px;
+}
 
 	#iconlist {
 		padding-left: 2em;
@@ -1271,6 +1227,10 @@ p.footer-copyright {
 
 	#digitalCrafts {
 		padding-left: -10px; 
+	}
+
+	.interests {
+		margin-top: -65px;
 	}
 
 	.timeline-table {
@@ -1296,9 +1256,7 @@ p.footer-copyright {
 /* === 19.1b Large devices. Desktops (<1200px) === */
 
 @media screen and (max-width: 1180px) {
-	.logo:after {
-		right: -13px;
-	}
+	
 }
 
 
@@ -1959,7 +1917,7 @@ p.footer-copyright {
 	}
 
 	.footer-copyright {
-		font-size: 9px;
+		font-size: 12px;
 		margin-right: 3px;
 	}
 
@@ -2009,30 +1967,50 @@ p.footer-copyright {
 		width: 185%;
 		margin-left: 0px;
 		}
-
-	.signature img {
-		margin-right: 158px;
-	}
 }
 
 @media screen and (max-width: 386px) {
 	.foot-break {
 		display:block;
 	}
+
+	.signature img {
+		margin-right: 155px;
+	}
+}
+
+@media screen and (max-width: 383px) {
+	.timeline-table {
+		width: 195%;
+		margin-left: 0px;
+		}
+}
+
+@media screen and (max-width: 378px) {
+
+	#intro {
+		margin-top: 20em;
+	}
+
+	.timeline-table  .timeline-table-content > em {
+		font-size: 10px;
+		color: rgba(0,0,0,.6);
+	}
+
+	.timeline-table .timeline-table-content > h4 {
+		font-size: 12px;
+	}
+
 }
 
 @media screen and (max-width: 362px) {
 
 	#intro {
-		margin-top: 18em;
-	}
-
-	.signature img {
-		margin-right: 115px;
+		margin-top: 20em;
 	}
 
 	.footer-copyright {
-		font-size: 7px;
+		font-size: 10px;
 		margin-right: 3px;
 	}
 
@@ -2041,20 +2019,15 @@ p.footer-copyright {
 	}
 
 	.interests-block {
-		margin-left: -30px; 
+		margin-right: 30px; 
+	}
+
+	.interest-block i {
+		font-size: 24px;
 	}
 
 	.portSmall {
 		margin-left: 5px;
-	}
-
-	.timeline-table {
-		margin-left: -18px;
-		width: 140%;
-	}
-
-	timeline-table-date {
-		font-size: 5px;
 	}
 
 	.bio p { 
@@ -2073,12 +2046,17 @@ p.footer-copyright {
 		font-size: 22px;
 	}
 
+	.timeline-table  .timeline-table-content > em {
+		font-size: 8px;
+		color: rgba(0,0,0,.6);
+	}
+
 }
 
 @media screen and (max-width: 348px) {
 
-	#intro {
-		margin-top: 17em;
+	.signature img {
+		margin-right: 120px;
 	}
 
 	.name-title {
@@ -2089,16 +2067,12 @@ p.footer-copyright {
 		font-size: 18px;
 	}
 
-	.signature img {
-		margin-right: 100px;
-	}
-
 	.portSmall {
 		margin-left: -8px;
 	}
 
 	.interests-block {
-		margin-left: -18px; 
+		margin-left: -48px; 
 	}
 
 	.interest-block h2 {
@@ -2108,6 +2082,11 @@ p.footer-copyright {
 	#updatenewLast {
 		margin-left: 27px;
 	}
+
+	.timeline-table {
+		width: 215%;
+		margin-left: 0px;
+		}
 
 	.tech {
 		margin-right: 45px;
@@ -2127,99 +2106,88 @@ p.footer-copyright {
 	}
 }
 
+@media screen and (max-width: 336px) {
+	.timeline-table {
+		width: 245%;
+		margin-left: 0px;
+		}
+
+	#containernew{
+		justify-content: center;
+	}
+
+	.interest-block i {
+		font-size: 20px;
+	}
+	.interest-block h2 {
+		font-size: 8px;
+	}
+
+}
+
 	@media screen and (max-width: 328px) {
 
-	.timeline-table {
-		margin-left: -24px;
-		width: 160%;
+
+	input[type=text], input[type=email], input[type=password], input[type=number], input[type=submit], select, textarea {
+		font-size: 10px;
 		}
+	
+	textarea[placeholder=Message] {
+		font-size: 10px;
+		}
+
+	.portfolio-item {
+		width: 110%;
+	}
+
+	.signature img {
+		margin-right: 100px;
+	}
+
+	.timeline-table {
+		width: 285%;
+		margin-left: -1em;
+		}
+
+
+}
+
+@media screen and (max-width: 309px) {
 
 	.signature img {
 		margin-right: 80px;
+	}
+
+	.timeline-table {
+		width: 325%;
+		margin-left: -1em;
 		}
 
-	input[type=text], input[type=email], input[type=password], input[type=number], input[type=submit], select, textarea {
-		font-size: 10px;
-		}
+}
+
+@media screen and (max-width: 299px) {
+
+	.education {display: none}
 	
-	textarea[placeholder=Message] {
-		font-size: 10px;
-		}
+	.footer-copyright {
+		font-size: 8px;
+		margin-right: -.5em;
+	}
 
-	timeline-table-date {
-		font-size: 3px;
-		}
-
-	.timeline-table  .timeline-table-content > h4 {
-		margin: 0;
+	.footer-social-media a {
 		font-size: 12px;
-		color: #000;
-		font-weight: 300;
-		}
-	
-	.timeline-table  .timeline-table-date {
-		font-size: 12px
-	}
-}
-
-@media screen and (max-width: 306px) {
-	#intro {
-		margin-top: 19em;
-	}
-
-	.signature img {
-		margin-right: 60px;
-	}
-
-	.portSmall {
-		margin-left: 150px;
-	}
-
-	.portfolio-item {
-		width: 150%;
-	}
-
-	.software-desc {
-		margin-right: auto;
-	}
-
-	.interests-block {
-		margin-left: -27px; 
-	}
-
-	#updatenewLast {
-		margin-left: 50px;
-	}
-
-	.timeline-table {
-		margin-left: -16px;
-		width: 160%;
-	}
-
-	input[type=text], input[type=email], input[type=password], input[type=number], input[type=submit], select, textarea {
-		font-size: 9px;
-		}
-	
-	textarea[placeholder=Message] {
-		font-size: 9px;
-		}
-}
-
-@media screen and (max-width: 304px) {
-	.timeline-table {
-		margin-left: -24px;
-		width: 180%;
+		display: inline; 
 	}
 }
 
 @media screen and (max-width: 295px) {
 	
 		#intro {
-		margin-top: 17em;
+			margin-top: 18em;
 		}
 
 		.contact-list {
-			margin-top: -1em;
+			margin-top: -2em;
 		}
 
 		.timeline-table {
@@ -2247,6 +2215,11 @@ p.footer-copyright {
 }
 
 @media screen and (max-width: 288px) {
+
+	#intro {
+		margin-top: 19em;
+	}
+
 	.contact {
 		margin-left: -14px;
 		width: 130%;
@@ -2257,54 +2230,32 @@ p.footer-copyright {
 		width: 230%;
 	}
 
-	.portSmall {
-		margin-left: -38px;
-	}
-
 	.interests-block {
 		margin-left: -43px; 
 	}
+
+	.portfolio-description  {
+		height: 170px;
+	}
+
+
+	.footer-copyright {
+		font-size: 7px;
+	}
+}
+
+@media screen and (max-width: 277px) {
 
 	.signature img {
 		margin-right: 50px;
 	}
 
+	.portfolio-description  {
+		height: 230px;
+	}
+
 	.footer-copyright {
 		font-size: 5px;
-		margin-right: 3px;
-	}
-}
-
-@media screen and (max-width: 280px) {
-
-	.education {
-		display: none;
-	}
-
-	.signature img {
-		margin-right: 35px;
-	}
-
-	.contact-form {
-		display: none;
-	}
-
-	.interests-block {
-		margin-left: -34px; 
-	}
-
-	.interest-block h2 {
-		font-size: 10px;
-	}
-
-	.footer-copyright {
-		font-size: 3px;
-		margin-right: 3px;
-	}
-
-	.footer-social-media a {
-		font-size: 10px;
-		display: inline; 
 	}
 
 }
@@ -2322,46 +2273,45 @@ p.footer-copyright {
 
 }
 
+@media screen and (max-width: 269px) {
+	#intro {
+		margin-top: 21em;
+	}
+
+	.interest-block i {
+		font-size: 15px;
+	}
+	.interest-block h2 {
+		font-size: 6px;
+	}
+}
+
+
 @media screen and (max-width: 256px) {
 	#intro {
-		margin-top: 20em;
-		}
+		margin-top: 24em;
+	}
+
+	.footer-copyright {
+		font-size: 4px;
+	}
+	
+}
+
+@media screen and (max-width: 250px) {
 
 	.signature img {
-		margin-right: 10px;
-		}
+		margin-right: 30px;
+	}
+}
 
-		.topnav a.active {
-			padding-top: 0.70em;
-			font-size: 2.8px;
-		}
-	
-		.topnav a {
-			padding-top: 1em;
-			font-size: 2.5px;
-		}
+@media screen and (max-width: 250px) {
 
-		.bio p {
-			font-size: 7px; 
-		}
+	.signature img {
+		margin-right: 30px;
+	}
 
-		.name-title {
-			font-size: 18px;
-		}
-
-		.profession-subtitle {
-			font-size: 12px;
-		}
-
-		.interests-block {
-			margin-left: -58px; 
-		}
-
-		.portSmall {
-			margin-left: -60px;
-		}
-
-		#updatenewLast {
-			margin-left: 62px;
-		}
+	.footer-copyright {
+		font-size: 3px;
+	}
 }
