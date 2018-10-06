@@ -506,7 +506,12 @@ h2.profession-subtitle {
 }
 
 .iconList {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	flex-direction: row;
 }
 
@@ -534,6 +539,9 @@ div.bio {
 	margin-right: 40px;
 }
 
+.ms-icon {
+	display: -ms-none;
+}
 
 /* === 6. Portfolio section styles === */
 
@@ -643,17 +651,31 @@ a.portfolio-description-title {
 }
 
 .modal-row {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
 	display: flex;
-	flex-wrap: wrap;
-	padding: 0 4px;
+	-webkit-flex-wrap: nowrap; /* Safari 6.1+ */
+	-ms-flex-wrap: nowrap;	   /* IE 10 */
+	flex-wrap: nowrap;
+	-ms-flex: 50.00%;              /* IE 10 */
+	-webkit-box-flex: 50%;
 	flex: 50%;
+	padding: 0 4px;
   }
 
   .mode-row {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
 	display: flex;
   }
   
   .mode-column {
+	-webkit-box-flex: 50.00%;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	-moz-box-flex: 50.00%;         /* OLD - Firefox 19- */
+  	-webkit-flex: 50.00%;          /* Chrome */
+  	-ms-flex: 50.00%;              /* IE 10 */
 	flex: 50.00%;
 	padding: 5px;
   }
@@ -813,8 +835,15 @@ a.portfolio-description-title {
 }
 
 #containernew {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -1411,8 +1440,8 @@ p.footer-copyright {
 	}
 
 	.logo img {
-		width: 120px;
-		margin-right: 330px;
+		width: 150px;
+		margin-right: 290px;
 	}
 
 	.col-md-2 .logo {
@@ -1424,14 +1453,14 @@ p.footer-copyright {
 		width: 110px;
 		height: 150px;
 		bottom: 0px;
-		left: 60px;
+		left: 80px;
 		position: absolute;
 		display: inline-block;
 		z-index: 5;
 	}
 
 	.signature img {
-		margin-right: 320px;
+		margin-right: 300px;
 	}
 
 
@@ -1444,7 +1473,7 @@ p.footer-copyright {
 	}
 
 	.portSmall {
-		margin-left: -37px;
+		margin-left: -3em;
 	}
 
 	.contact-list-title {
@@ -1553,7 +1582,12 @@ p.footer-copyright {
 	}
 
 	.contact-list {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
 		flex-direction: row;
 	}
 
@@ -1723,13 +1757,23 @@ p.footer-copyright {
 	}
 
 	.contact-one {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 		margin-top: 2.5em;
 	}
 
 	.contact-list {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
 	}
 
@@ -2125,6 +2169,8 @@ p.footer-copyright {
 		}
 
 	#containernew{
+		-webkit-box-pack: center;
+	    -ms-flex-pack: center;
 		justify-content: center;
 	}
 
@@ -2327,3 +2373,12 @@ p.footer-copyright {
 		font-size: 3px;
 	}
 }
+
+/* Conditional Breakpoints for Different Browsers */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
+	.ion-icon{
+		height: 2px;
+		width: 2px;
+	}
+  }
