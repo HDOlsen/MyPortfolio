@@ -545,17 +545,46 @@ div.bio {
 
 /* === 6. Portfolio section styles === */
 
-.portfolio-item {
-	margin-bottom: 20px;
-}
-
 #portfolio {
 	margin-top: -20px;
+}
+
+.portfolio_section{
+	padding: 0px;
+	margin-left: 0px;
+	display: flex;
+}
+
+.portfolio_title{
+	width: 20%;
+}
+
+.portfolio_grid{
+	width: 80%;
+}
+
+.portfolio-items-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.portfolio-item-wrapper{
+	width: 45%;
+	margin: .2rem;
+	/* background: rgba(0,0,0,.03); */
 }
 
 .portfolio-image  {
 	position: relative;
 	overflow: hidden;
+}
+
+.portfolio-image a img{
+	max-width: 100%;
+	width: auto;
+	margin: auto;
 }
 
 .portfolio-item .portfolio-image  img {
@@ -1305,6 +1334,21 @@ p.footer-copyright {
 
 @media screen and (max-width: 991px) {
 
+	.portfolio_section{
+		padding: 0px;
+		margin-left: 0px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.portfolio_title{
+		width: 100%;
+	}
+	
+	.portfolio_grid{
+		width: 100%;
+	}
+
 	.contact-list-text {
 		font-size: 9.5px;
 	}
@@ -1321,21 +1365,12 @@ p.footer-copyright {
 		font-size: 16px;
 	}
 
-	.portfolio-item {
-		margin-left: 42px;
-		width: 200px;
-	}
-
 	.portfolio-description {
 		height: 195px;
 	}
 
 	.portfolio-p {
 		font-size: 8px;
-	}
-
-	.portSmall {
-		margin-left: 25px;
 	}
 
 	.hero {
@@ -1472,10 +1507,6 @@ p.footer-copyright {
 		font-size: 18px;
 	}
 
-	.portSmall {
-		margin-left: -3em;
-	}
-
 	.contact-list-title {
 		font-size: 11px;
 	}
@@ -1561,6 +1592,14 @@ p.footer-copyright {
 
 @media screen and (max-width: 575px) {
 
+	.portfolio-items-wrapper{
+		flex-direction: column;
+	}
+
+	.portfolio-item-wrapper{
+		width: 98%;
+	}
+
 	.logo img {
 		width: 150px;
 		margin-left: 20px;
@@ -1618,14 +1657,6 @@ p.footer-copyright {
 
 	#resume {
 		padding-left: 2.5em;
-	}
-
-	.portSmall {
-		margin-left: 20px;
-	}
-
-	.portfolio-item {
-		width: 75%;
 	}
 
 	.portfolio-description-title {
@@ -1819,14 +1850,6 @@ p.footer-copyright {
 		margin-top: 0.5em;
 	}
 
-	.portSmall {
-		margin-left: 20px;
-	}
-
-	.portfolio-item {
-		width: 75%;
-	}
-
 	.interests-block {
 		margin-left: -30px;
 	}
@@ -1915,9 +1938,6 @@ p.footer-copyright {
 		/* === 19.4d Extra-small devices Phones (<435px) === */
 
 @media screen and (max-width: 435px) {
-	.portfolio-item {
-		width: 80%;
-	}
 
 	.interest-block i {
 		font-size: 28px;
@@ -1983,11 +2003,6 @@ p.footer-copyright {
 
 	.signature img {
 		margin-right: 180px;
-	}
-
-	.portfolio-item {
-		width: 90%;
-		margin-left: 0px;
 	}
 
 	.timeline-table {
@@ -2082,10 +2097,6 @@ p.footer-copyright {
 		font-size: 24px;
 	}
 
-	.portSmall {
-		margin-left: 5px;
-	}
-
 	.bio p { 
 		font-size: 9.5px;
 	}
@@ -2121,10 +2132,6 @@ p.footer-copyright {
 
 	.profession-subtitle {
 		font-size: 18px;
-	}
-
-	.portSmall {
-		margin-left: -8px;
 	}
 
 	.interests-block {
@@ -2163,6 +2170,10 @@ p.footer-copyright {
 }
 
 @media screen and (max-width: 336px) {
+
+
+	flex-direction: column;
+
 	.timeline-table {
 		width: 245%;
 		margin-left: 0px;
@@ -2193,10 +2204,6 @@ p.footer-copyright {
 	textarea[placeholder=Message] {
 		font-size: 10px;
 		}
-
-	.portfolio-item {
-		width: 110%;
-	}
 
 	.signature img {
 		margin-right: 100px;
@@ -2382,3 +2389,22 @@ p.footer-copyright {
 		width: 2px;
 	}
   }
+
+
+
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}

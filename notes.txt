@@ -1,0 +1,2 @@
+991px, breakpoint for the portfolio sections 2 columns
+575px, breakpoint for the individual portfolio items
