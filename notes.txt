@@ -1,2 +1,4 @@
 991px, breakpoint for the portfolio sections 2 columns
 575px, breakpoint for the individual portfolio items
+if the site looks different live than it does locally, refresh the cache on your website, the live hosted one,
+with cmd + shift + r  that should reset the cache of that website
