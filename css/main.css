@@ -1861,7 +1861,7 @@ p.footer-copyright {
 	}
 
 	.timeline-table  .timeline-table-content > em {
-		font-size: .7em;
+		font-size: .8em;
 	}
 
 }
@@ -1892,16 +1892,18 @@ p.footer-copyright {
 
 	.signature img {
 	margin-right: 54%;
-}
+	}
 
-.interest-block i {
+	.interest-block i {
 	font-size: 2em;
+	}
+
+	.interest-block h2 {
+	font-size: .4em;
+	padding-top: 1em;
+	}
 }
 
-.interest-block h2 {
-	font-size: .4em;
-}
-}
 @media screen and (max-width: 364px) {
 
 	#intro {
@@ -1927,6 +1929,7 @@ p.footer-copyright {
 	.timeline-table  .timeline-table-content > em {
 		font-size: 0.6em;
 	}
+
 
 	.timeline-table  .timeline-table-date .timeline-table-date-dc {
 		font-size: .6em;
